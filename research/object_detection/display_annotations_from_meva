@@ -1,0 +1,18 @@
+import cv2
+import json
+
+counter = 0
+cap = cv2.VideoCapture('/home/nikhal/2018-03-07/16/2018-03-07.16-50-00.16-55-00.bus.G475.avi')
+with open('/home/nikhal/2018-03-07/16/2018-03-07.16-50-00.16-55-00.admin.G329.activities.json') as f:
+  data = json.load(f)
+
+
+while (cap.isOpened()):
+    counter += 1
+    print(counter)
+    ret, frame = cap.read()
+    if ret == True:
+        continue
+
+    else:
+        break
